@@ -1,0 +1,40 @@
+{
+  "name": "countriesapi",
+  "version": "1.0.0",
+  "description": "Graphql App for https://aylabyuk.github.io/countries/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --out-dir dist",
+    "start": "babel-watch src/index.js"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "apollo-server-express": "^2.4.2",
+    "child-process-promise": "^2.2.1",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "graphql": "^14.1.1",
+    "graphql-iso-date": "^3.6.1",
+    "graphql-type-json": "^0.2.1",
+    "merge-graphql-schemas": "^1.5.8"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babel-watch": "^7.0.0",
+    "dotenv-cli": "^1.4.0",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "prettier": "^1.16.4"
+  },
+  "author": "Oriel Vinci Absin",
+  "license": "ISC"
+}
