@@ -38,5 +38,5 @@ type Country {
 type Query {
   countries(continentName: String!): [Country]
   continents: [Continent]
-  country: (geonameId: String): Country
+  country(continentName: String!, countryName: String!): Country
 }
