@@ -1,0 +1,42 @@
+type Bbox {
+  east: Float
+  south: Float
+  north: Float
+  west:Float
+  accuracyLevel: Float
+}
+
+type Continent {
+  name: String
+  geonameId: String
+  lat: Float
+  lng: Float
+  bbox: Bbox
+  population: String
+}
+
+type Country {
+  continent: String
+  capital: String
+  languages: String
+  geonameId: String
+  isoAlpha3: String
+  fipsCode: String
+  population: String
+  isoNumeric: Int
+  areaInSqKm: String
+  countryCode: String
+  countryName: String
+  continentName: String
+  currencyCode: String
+  north: Float
+  east: Float
+  west: Float
+  south: Float
+}
+
+type Query {
+  countries(continentName: String!): [Country]
+  continents: [Continent]
+  country: (geonameId: String): Country
+}
