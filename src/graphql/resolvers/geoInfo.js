@@ -1,7 +1,10 @@
+import GraphQLJSON from 'graphql-type-json';
 import getSymbolFromCurrency from 'currency-symbol-map';
 import isoConv from 'iso-language-converter/index.es5';
+import { SSL_OP_NETSCAPE_REUSE_CIPHER_CHANGE_BUG } from 'constants';
 
 export default {
+  JSON: GraphQLJSON,
   Country: {
     currency(country) {
       return {
@@ -48,6 +51,13 @@ export default {
         return cont.filter(item => item.name === continentName);
       });
       return res[0];
+    },
+    search: async (_, { searchString }, { utils }) => {
+      const res = await utils.geonamesUtils.search(searchString).then(result => {
+        return result;
+      });
+
+      return res;
     }
   }
 };

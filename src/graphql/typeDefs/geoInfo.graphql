@@ -1,3 +1,5 @@
+scalar JSON
+
 type Bbox {
   east: Float
   south: Float
@@ -50,4 +52,5 @@ type Query {
   continents: [Continent]
   country(continentName: String!, countryName: String!): Country
   continent(continentName: String!): Continent
+  search(searchString: String!): [Country]
 }

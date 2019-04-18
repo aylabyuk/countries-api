@@ -32,5 +32,21 @@ module.exports = {
           reject(err);
         });
     });
+  },
+  // search
+  search: async searchString => {
+    return new Promise((resolve, reject) => {
+      geonames
+        .countryInfo({})
+        .then(countries => {
+          const filtered = countries.geonames.filter(item => {
+            return item.countryName.toLowerCase().includes(searchString.toLowerCase());
+          });
+          resolve(filtered);
+        })
+        .catch(err => {
+          reject(err);
+        });
+    });
   }
 };
