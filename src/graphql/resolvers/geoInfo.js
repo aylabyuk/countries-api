@@ -11,6 +11,10 @@ export default {
     },
     languages(country) {
       const langArr = country.languages.split(',').map(l => {
+        // prevent errs
+        if (!l) {
+          return null;
+        }
         return {
           code: l,
           name: isoConv(l.split('-')[0])
