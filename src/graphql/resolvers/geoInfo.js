@@ -21,6 +21,8 @@ export default {
         };
       });
 
+      if (langArr[0] === null) return [];
+
       return langArr;
     }
   },
