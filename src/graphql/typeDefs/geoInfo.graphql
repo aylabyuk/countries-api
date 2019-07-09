@@ -4,7 +4,7 @@ type Bbox {
   east: Float
   south: Float
   north: Float
-  west:Float
+  west: Float
   accuracyLevel: Float
 }
 
