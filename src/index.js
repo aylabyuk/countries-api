@@ -16,7 +16,9 @@ const server = new ApolloServer({
   resolvers,
   context: () => ({
     utils
-  })
+  }),
+  introspection: true,
+  playground: true
 });
 
 server.applyMiddleware({
