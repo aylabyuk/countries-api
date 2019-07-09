@@ -24,7 +24,7 @@ const server = new ApolloServer({
 server.applyMiddleware({
   app,
   cors: {
-    origin: [process.env.FRONTEND_URL, 'https://aylabyuk.github.io/countries/#/'],
+    origin: [process.env.FRONTEND_URL, 'https://aylabyuk.github.io'],
     credentials: true
   }
 }); // app is from an existing express app
