@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
-    "apollo-server-express": "^2.6.7",
+    "apollo-server-express": "^2.14.2",
     "child-process-promise": "^2.2.1",
     "currency-symbol-map": "^4.0.4",
     "dotenv": "^8.0.0",
